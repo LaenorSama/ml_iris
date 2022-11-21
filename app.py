@@ -1,7 +1,7 @@
 import flask
 from flask import render_template
 import pickle
-import sklearn
+#import sklearn
 #import numpy as np
 
 app = flask.Flask(__name__, template_folder='templates')
