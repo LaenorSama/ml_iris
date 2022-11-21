@@ -32,3 +32,9 @@ def main():
 
 if __name__ == '__main__':
     app.run()
+
+'''
+At first I wanted to put it on versel.app, but there is a limit of 50mb. 
+because of this, there was not enough space for sklearn. so deployed on railway
+vercel.json - not used
+'''
