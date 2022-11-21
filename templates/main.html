@@ -1,0 +1,47 @@
+<!doctype html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+    <title>Iris Model</title>
+</head>
+
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values of your iris:</legend>
+        sepal_length:
+        <input name="sepal_length" type="number" step="any" value=5 required>
+        <br>
+        <br>
+        sepal_with:
+        <input name="sepal_with" type="number" step="any" value=3.5 required>
+        <br>
+        <br>
+        petal_length:
+        <input name="petal_length" type="number" step="any" value=1.4 required>
+        <br>
+        <br>
+        petal_length:
+        <input name="petal_with" type="number" step="any" value=0.2 required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+
+<div class="result" align="center">
+    {% if result %}
+    	<br> <p style="font-size:50px">Your iris is:</p>
+   		<p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
