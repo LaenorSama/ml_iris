@@ -1,7 +1,7 @@
 import flask
 from flask import render_template
 import pickle
-import numpy as np
+#import numpy as np
 
 app = flask.Flask(__name__, template_folder='templates')
 
@@ -22,8 +22,9 @@ def main():
         petal_length = float(flask.request.form['petal_length'])
         petal_with = float(flask.request.form['petal_with'])
         iris_class = ['setosa', 'versicolor', 'virginica']
-        X = np.array([sepal_length, sepal_with, petal_length, petal_with])
-        X = X.reshape(1, -1)
+        #X = np.array([sepal_length, sepal_with, petal_length, petal_with])
+        #X = X.reshape(1, -1)
+        X=[[sepal_length, sepal_with, petal_length, petal_with]]
         temp = iris_class[loaded_model.predict(X)[0]]
         return render_template('main.html', result=temp)
 
